@@ -1,0 +1,32 @@
+server:
+  port: 2323
+spring:
+  datasource:
+    dynamic:
+      #开启mybatis sql日志打印 生产环境注意 此处会带来一定性能损耗
+      hikari:
+        connection-timeout: 30000
+        max-lifetime: 30000
+        max-pool-size: 15
+        min-idle: 5
+        connection-test-query: select 1
+      primary: base
+      datasource:
+        base:
+          username: root
+          password: 111111
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b8&zeroDateTimeBehavior=convertToNull
+  # redis数据库
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password: 111111
+    lettuce:
+      pool:
+        min-idle: 8
+        max-idle: 500
+        max-active: 2000
+        max-wait: 10000s
+    timeout: 5000s

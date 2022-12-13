@@ -1,0 +1,40 @@
+{
+  "serverUrl": "http://api.yarns.top",
+  "allInOne": true,
+  "allInOneDocFileName": "index.html",
+  "coverOld": true,
+  "createDebugPage": true,
+  "packageFilters": "com.boot.api.controller.*",
+  "style": "xt256",
+  "inlineEnum": true,
+  "projectName": "后台api",
+  "showAuthor": true,
+  "appToken": "123asdqwewqeqweasd",
+  "isReplace": true,
+  "openUrl": "http://api.yarns.top/api",
+  "debugEnvName": "测试环境",
+  "debugEnvUrl": "http://test.3306.run/api/admin",
+  "tornaDebug": false,
+  "requestHeaders": [
+    {
+      "name": "Authorization",
+      "type": "string",
+      "desc": "认证后返回的凭据",
+      "value": "",
+      "required": true,
+      "since": "0.0.1",
+      "pathPatterns": "/**",
+      "excludePathPatterns": "/auth/login,/generator/zip"
+    }
+  ],
+  "revisionLogs": [
+    {
+      "version": "0.0.1",
+      "revisionTime": "2022-6-3 00:56:41",
+      "status": "create",
+      "author": "Yarns",
+      "remarks": "文档初始化"
+    }
+  ],
+  "outPath": "src/main/resources/static/doc"
+}
